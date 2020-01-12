@@ -10,10 +10,9 @@ A simple usage example:
 ```dart
 import 'package:time_parser/time_parser.dart';
 
-main() {
-  void main() {
-    var time = Time.parse('15:30');
-    print('hours: ${time.hours}, minutes: ${time.minutes}');
+void main() {
+  var time = Time.parse('15:30');
+  print('hours: ${time.hours}, minutes: ${time.minutes}');
 }
 ```
 
