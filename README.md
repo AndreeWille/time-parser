@@ -11,7 +11,9 @@ A simple usage example:
 import 'package:time_parser/time_parser.dart';
 
 main() {
-  var awesome = new Awesome();
+void main() {
+  var time = Time.parse('15:30');
+  print('hours: ${time.hours}, minutes: ${time.minutes}');
 }
 ```
 
