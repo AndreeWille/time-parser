@@ -2,15 +2,11 @@ import 'package:time_parser/time_parser.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    Awesome awesome;
-
-    setUp(() {
-      awesome = Awesome();
-    });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+  group('splits valid time input', () {
+    test('into integers', () {
+      var correctTime = Time.parse('15:30');
+      expect(correctTime.hours, equals(15));
+      expect(correctTime.minutes, equals(30));
     });
   });
 }

@@ -1,6 +1,13 @@
-// TODO: Put public facing types in this file.
+class Time {
+  String time;
+  int hours;
+  int minutes;
 
-/// Checks if you are awesome. Spoiler: you are.
-class Awesome {
-  bool get isAwesome => true;
+  Time.parse(String time) {
+    this.time = time;
+    var hoursAndMinutesAsString = time.split(':');
+    
+    hours = int.parse(hoursAndMinutesAsString[0]);
+    minutes = int.parse(hoursAndMinutesAsString[1]);
+  }
 }
