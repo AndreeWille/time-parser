@@ -5,7 +5,7 @@ Created from templates made available by Stagehand under a BSD-style
 
 ## Format
 A valid time string has the format: 
-````regex
+```regex
 ^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$
 ```
 
