@@ -2,10 +2,33 @@ class Time {
   int hours;
   int minutes;
 
-  Time.parse(String time) {
-    var hoursAndMinutesAsString = time.split(':');
-    
-    hours = int.parse(hoursAndMinutesAsString[0]);
-    minutes = int.parse(hoursAndMinutesAsString[1]);
+  Time(this.hours, this.minutes);
+}
+
+abstract class TimeParser {
+
+  static Time parse(String timeString) {
+    if (!isValid(timeString)) throw TimeParseException('invalid timeString: $timeString');
+
+    var hoursAndMinutesAsString = timeString.split(':');
+    var hours = int.parse(hoursAndMinutesAsString[0]);
+    var minutes = int.parse(hoursAndMinutesAsString[1]);
+    return Time(hours, minutes);
   }
+
+  static bool isValid(String timeString) {
+    var expr = RegExp(r'^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$');
+    return expr.hasMatch(timeString);
+  }
+}
+
+class TimeParseException implements Exception {
+  String _message;
+
+  TimeParseException([String message = 'invalid time string']) {
+    _message = message;
+  }
+
+  @override
+  String toString() => '$runtimeType: $_message';
 }
