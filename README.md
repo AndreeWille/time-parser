@@ -17,6 +17,7 @@ import 'package:time_parser/time_parser.dart';
 void main() {
   var time = Time.parse('15:30');
   print('hours: ${time.hours}, minutes: ${time.minutes}');
+  // => hours: 15, minutes: 30
 }
 ```
 
@@ -28,7 +29,8 @@ void main() {
    try {
     TimeParser.parse('xx:xx');
   } catch(TimeParseException) {
-    print(e); // TimeParseException: invalid timeString: xx:xx
+    print(e); 
+    // => TimeParseException: invalid timeString: xx:xx
   }
 }
 ```
