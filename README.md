@@ -1,7 +1,4 @@
-A library for Dart developers.
-
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+A Dart libraty that parses a time string and returns a time object in order to easily access hours and minutes
 
 ## Format
 A valid time string has the format: 
