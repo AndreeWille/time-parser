@@ -1,3 +1,8 @@
+## 1.1.0 2020-01-16
+
+- Add Time.toString
+- Update README.md with a description and update examples
+
 ## 1.0.0 2020-01-14
 
 - TimeParser parses a string of the format HH:MM an return a Time object containing the value for hours and minutes. Both with type int.
