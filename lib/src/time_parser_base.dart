@@ -3,6 +3,11 @@ class Time {
   int minutes;
 
   Time(this.hours, this.minutes);
+
+  @override
+  String toString()          => '${_format(hours)}:${_format(minutes)}';
+
+  String _format(int number) => '${number < 10 ? '0$number': number}';
 }
 
 abstract class TimeParser {

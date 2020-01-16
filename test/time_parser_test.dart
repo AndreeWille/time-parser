@@ -16,11 +16,20 @@ void main() {
       });
     });
   });
-  group('invalid time stings', () {
+  group('invalid time strings', () {
     test('cause an TimeParseException', () {
       var invalidInput = ['xx:xx', '111:10', '111:111', '11:111', '1:00 am', '2:00 pm', 'x23:00'];
       invalidInput.forEach((timeString) {
         expect(() => TimeParser.parse(timeString), throwsA(isA<TimeParseException>()));
+      });
+    });
+  });
+  group('time#toString', () {
+    test('prints with format HH:MM', () {
+      var timeStrings = {'01:00': '01:00', '1:00': '01:00', '01:05': '01:05'};
+      timeStrings.forEach((timeString, expectedResult) {
+        var time = TimeParser.parse(timeString);
+        expect(time.toString(), equals(expectedResult));
       });
     });
   });
