@@ -1,3 +1,7 @@
+## 1.1.1 2021-05-27
+
+- Initialize instance variable for null safety
+
 ## 1.1.0 2020-01-16
 
 - Add Time.toString
