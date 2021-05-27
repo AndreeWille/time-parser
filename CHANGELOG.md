@@ -1,4 +1,4 @@
-## 1.2.2 (2021-05-27)
+## 1.2.2 (not published)
 
 - update dev_dependencies to newer versions
 
