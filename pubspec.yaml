@@ -1,6 +1,6 @@
 name: time_parser
 description: parses a time string and returns a time object in order to easily access hours and minutes.
-version: 1.2.0
+version: 1.2.1
 
 homepage: https://github.com/AndreeWille/time_parser
 repository: https://github.com/AndreeWille/time_parser

@@ -1,3 +1,7 @@
+## 1.2.1 2021-05-27
+
+- format code with dartfmt
+
 ## 1.2.0 2021-05-27
 
 - requires a dart sdk with null safety feature

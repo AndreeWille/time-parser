@@ -5,15 +5,16 @@ class Time {
   Time(this.hours, this.minutes);
 
   @override
-  String toString()          => '${_format(hours)}:${_format(minutes)}';
+  String toString() => '${_format(hours)}:${_format(minutes)}';
 
-  String _format(int number) => '${number < 10 ? '0$number': number}';
+  String _format(int number) => '${number < 10 ? '0$number' : number}';
 }
 
 abstract class TimeParser {
-
   static Time parse(String timeString) {
-    if (!isValid(timeString)) throw TimeParseException('invalid timeString: $timeString');
+    if (!isValid(timeString)) {
+      throw TimeParseException('invalid timeString: $timeString');
+    }
 
     var hoursAndMinutesAsString = timeString.split(':');
     var hours = int.parse(hoursAndMinutesAsString[0]);

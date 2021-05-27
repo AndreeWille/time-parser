@@ -4,7 +4,12 @@ import 'package:test/test.dart';
 void main() {
   group('valid time strings', () {
     test('are parsed correctly', () {
-      var validInput = {'15:30': [15, 30], '00:00': [0, 0], '23:59': [23, 59], '0:59': [0, 59]};
+      var validInput = {
+        '15:30': [15, 30],
+        '00:00': [0, 0],
+        '23:59': [23, 59],
+        '0:59': [0, 59]
+      };
 
       validInput.forEach((timeString, expectedResult) {
         var time = TimeParser.parse(timeString);
@@ -18,9 +23,18 @@ void main() {
   });
   group('invalid time strings', () {
     test('cause an TimeParseException', () {
-      var invalidInput = ['xx:xx', '111:10', '111:111', '11:111', '1:00 am', '2:00 pm', 'x23:00'];
+      var invalidInput = [
+        'xx:xx',
+        '111:10',
+        '111:111',
+        '11:111',
+        '1:00 am',
+        '2:00 pm',
+        'x23:00'
+      ];
       invalidInput.forEach((timeString) {
-        expect(() => TimeParser.parse(timeString), throwsA(isA<TimeParseException>()));
+        expect(() => TimeParser.parse(timeString),
+            throwsA(isA<TimeParseException>()));
       });
     });
   });

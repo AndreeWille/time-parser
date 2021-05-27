@@ -7,7 +7,7 @@ void main() {
   // invalid time strings cause an TimeParseException
   try {
     TimeParser.parse('xx:xx');
-  } catch(e) {
+  } catch (e) {
     print(e); // TimeParseException: invalid timeString: xx:xx
   }
 }
