@@ -28,7 +28,7 @@ abstract class TimeParser {
 }
 
 class TimeParseException implements Exception {
-  String _message;
+  String _message = '';
 
   TimeParseException([String message = 'invalid time string']) {
     _message = message;
